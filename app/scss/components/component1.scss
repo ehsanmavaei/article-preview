@@ -57,9 +57,8 @@ body {
 
 footer {
   position: relative;
-  overflow: hidden;
-
-  padding: 1.5rem;
+  // overflow: hidden;
+   padding: 0 !important;
 
   max-height: 80px;
 
@@ -84,23 +83,24 @@ footer {
   }
 
   .open-share {
+   padding: 30px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding-left: 30px;
+    // padding-left: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
     position: absolute;
     top: 90px;
-    left: 0;
-    height: 90%;
-    width: calc(100%);
+    left: -25px;
+    height: 100%;
+   width: 114%;
     transition: all .4s ease;
 
     background-color: $very-Dark-Grayish-Blue;
 
     &.active {
-      top: 8px;
+      top: 2px;
     }
 
     #arrow {
@@ -130,4 +130,73 @@ footer {
     @extend %arrow;
 
   }
+
+}
+@media (min-width:50rem){
+  .main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .margin-top>* {
+    margin-top: 10px;
+  }
+  
+  .article{
+    min-width: 800px;
+    display: grid;
+    
+    grid-template-columns: 300px auto;
+
+  }
+  .head{
+    display: flex;
+    
+
+  img{
+    overflow: hidden;
+    // width: calc(100%-40px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  }
+  .card{
+    padding-top: 10px;
+    height: 180px;
+  }
+  footer{
+    .open-share {
+      padding: 30px;
+      border-radius: 10px;
+       // padding-left: 30px;
+       display: flex;
+       align-items: center;
+       gap: 20px;
+       position: absolute;
+       top: -70px;
+       left: 330px;
+       height: 100%;
+      width: 200px;
+      opacity: 0;
+       transition: all .4s ease;
+   
+       background-color: $very-Dark-Grayish-Blue;
+   
+       &.active {
+         opacity: 1;
+         top: -70px;
+       }
+   
+       #arrow {
+     display: none;
+    
+   
+       }
+   
+  }
+}
+  
 }

@@ -11,7 +11,13 @@ const arrow = document.querySelector('#arrow');
 
 button.addEventListener('click', event => {
 	console.log("id");
-	open_share.classList.add('active')
+	if(open_share.classList.contains('active')){
+		open_share.classList.remove('active')
+		console.log('has')
+	}else{
+		open_share.classList.add('active')
+	}
+	
 	
  
 });
